@@ -68,7 +68,7 @@ public class Cas_8 extends JFrame {
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
-        setTitle("Afficher la liste des lots pour vérifier la vente du jour");
+        setTitle("La Criee - Afficher la liste des lots pour vérifier la vente du jour");
 
 
         // Titre

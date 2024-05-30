@@ -68,7 +68,7 @@ public class Cas_12 extends JFrame {
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
-        setTitle("Modifier le poids des bacs pour un lot donné du jour");
+        setTitle("La Criee - Modifier le poids des bacs pour un lot donné du jour");
 
         
         // Titre

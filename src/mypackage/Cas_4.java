@@ -64,7 +64,7 @@ public class Cas_4 extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
         contentPane.setLayout(null);
-        setTitle("Créer les bacs de poissons et les données associées pour un lot");
+        setTitle("La Criee - Créer les bacs de poissons et les données associées pour un lot");
 
 
         // Titre

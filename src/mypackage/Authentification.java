@@ -58,7 +58,7 @@ public class Authentification extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
         contentPane.setLayout(null);
-        setTitle("Connexion à l'interface utilisateur");
+        setTitle("La Criee - Connexion à l'interface utilisateur");
 
         
         // Titre
