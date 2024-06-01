@@ -98,7 +98,7 @@ public class Cas_8 extends JFrame {
         displayLotData();
 
 
-        // Bouton Retour
+        // Bouton
         JButton btnNewButton = new JButton("Retour");
         btnNewButton.setBounds(659, 0, 120, 25);
         btnNewButton.setForeground(Color.WHITE);

@@ -98,7 +98,7 @@ public class Cas_12 extends JFrame {
         displayLotData();        
         
         
-        // Bouton Modifier
+        // Bouton
         JButton btnNewButton2 = new JButton("Modifier");
         btnNewButton2.setBounds(659, 325, 120, 25);
         btnNewButton2.setForeground(Color.WHITE);
@@ -114,22 +114,21 @@ public class Cas_12 extends JFrame {
                 }
 
                 // Récupérer l'ID du lot sélectionné
-                int idLot = (int) table.getValueAt(selectedRow, 0); // Supposant que la première colonne contient l'ID
+                int idLot = (int) table.getValueAt(selectedRow, 0);
 
-                // Afficher une boîte de dialogue avec une JComboBox pour sélectionner le nouveau tare
+                // Afficher une boîte de dialogue
                 JComboBox<String> tareComboBox = new JComboBox<>(getTypeBacTare());
-                tareComboBox.setSelectedItem(table.getValueAt(selectedRow, 1)); // Supposant que la deuxième colonne contient le tare
+                tareComboBox.setSelectedItem(table.getValueAt(selectedRow, 1));
                 int option = JOptionPane.showConfirmDialog(Cas_12.this, tareComboBox, "Sélectionnez le nouveau poids:", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
                 if (option == JOptionPane.OK_OPTION) {
                     String newTare = (String) tareComboBox.getSelectedItem();
-                    // écrire le code pour récupérer l'id correspondant au tare de la table typebac
 
                     try {
                         // Requête pour récupérer l'ID du tare sélectionné
                         Statement statement = con.createStatement();
                         ResultSet idResultSet = statement.executeQuery("SELECT id FROM typebac WHERE tare = '" + newTare + "'");
                         
-                        // Vérification s'il y a un résultat (devrait y avoir au plus un résultat car le tare est censé être unique)
+                        // Vérification s'il y a un résultat
                         if (idResultSet.next()) {
                             int newTypeBacId = idResultSet.getInt("id");
 
@@ -160,7 +159,7 @@ public class Cas_12 extends JFrame {
         });
 
         
-        // Bouton Retour
+        // Bouton
         JButton btnNewButton = new JButton("Retour");
         btnNewButton.setBounds(659, 0, 120, 25);
         btnNewButton.setForeground(Color.WHITE);

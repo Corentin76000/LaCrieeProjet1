@@ -12,6 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.border.EmptyBorder;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -26,7 +27,7 @@ public class Authentification extends JFrame {
     private static final long serialVersionUID = 1L;
     private JPanel contentPane;
     private JTextField identifiant;
-    private JTextField mdp;
+    private JPasswordField mdp;
     static Connection con;
 
 	// Méthode jFrame
@@ -51,7 +52,7 @@ public class Authentification extends JFrame {
     	
         // Définition paramètres fenêtre
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(800, 500, 450, 300);
+        setBounds(800, 500, 600, 300);
 		contentPane = new JPanel();
 		contentPane.setForeground(new Color(255, 255, 255));
 		contentPane.setBackground(new Color(192, 192, 192));
@@ -59,6 +60,11 @@ public class Authentification extends JFrame {
 		setContentPane(contentPane);
         contentPane.setLayout(null);
         setTitle("La Criee - Connexion à l'interface utilisateur");
+
+        // Image
+        JLabel lblLogo = new JLabel(new ImageIcon(getClass().getResource("LaCrieeLogo.png")));
+        lblLogo.setBounds(400, 30, 150, 150);
+        contentPane.add(lblLogo);
 
         
         // Titre
@@ -104,7 +110,7 @@ public class Authentification extends JFrame {
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String NomUtilisateur = identifiant.getText();
-                String Mdp = mdp.getText();
+                String Mdp = new String(mdp.getPassword());
                 try {
                     Statement statement = con.createStatement();
                     ResultSet resultSet = statement.executeQuery("SELECT nomUtilisateur, motdepasse FROM utilisateurs WHERE nomUtilisateur='" + NomUtilisateur + "' AND motdepasse='" + Mdp + "'");

@@ -97,14 +97,14 @@ public class Cas_4 extends JFrame {
         lblTitre3.setBounds(199, 108, 111, 32);
         contentPane.add(lblTitre3);
 
-        // Zone de texte pour saisir le nom du bac
+        // Zone de saisie
         textFieldNomBac = new JTextField();
         textFieldNomBac.setBounds(316, 114, 180, 25);
         contentPane.add(textFieldNomBac);
         textFieldNomBac.setColumns(10);
 
 
-        // Bouton Créer
+        // Bouton
         JButton btnNewButton2 = new JButton("Créer");
         btnNewButton2.setBounds(659, 325, 120, 25);
         btnNewButton2.setForeground(Color.WHITE);
@@ -151,7 +151,7 @@ public class Cas_4 extends JFrame {
         });
 
 
-        // Bouton Retour
+        // Bouton
         JButton btnNewButton1 = new JButton("Retour");
         btnNewButton1.setBounds(659, 0, 120, 25);
         btnNewButton1.setForeground(Color.WHITE);
